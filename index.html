@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .carousel {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .caption h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .caption a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #fff;
+            text-decoration: underline;
+        }
+        .navigation-dots {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .dot.active {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://source.unsplash.com/800x450/?art,painting" alt="Imagen 1">
+                <div class="caption">
+                    <h2>Expresión Artística</h2>
+                    <a href="#">read more</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://source.unsplash.com/800x450/?graffiti,streetart" alt="Imagen 2">
+                <div class="caption">
+                    <h2>Arte Urbano</h2>
+                    <a href="#">read more</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://source.unsplash.com/800x450/?sculpture,modern" alt="Imagen 3">
+                <div class="caption">
+                    <h2>Escultura Moderna</h2>
+                    <a href="#">read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-dots">
+            <div class="dot active" onclick="moveToSlide(0)"></div>
+            <div class="dot" onclick="moveToSlide(1)"></div>
+            <div class="dot" onclick="moveToSlide(2)"></div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+
+        function moveToSlide(index) {
+            slides.style.transform = ⁠ translateX(-${index * 100}%) ⁠;
+            dots[currentIndex].classList.remove('active');
+            dots[index].classList.add('active');
+            currentIndex = index;
+        }
+    </script>
+</body>
+</html>
