@@ -1,0 +1,65 @@
+body {
+    background-color: white;
+
+
+}
+
+.div1 {
+    display: block;
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+   
+}
+
+.div1 img{
+    width: 100%;
+    
+}
+
+.logo {
+    fill: #FD5948;
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(50%, 50%);
+}
+
+h1{
+    font-family: Roboto, sans-serif;
+    display: block;
+    font-size: 1.875rem;
+    
+}
+
+.texto1{
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: .7em;
+}
+
+p{
+    font-size: 1.25rem;
+    font-family: Roboto, sans-serif;
+}
+
+.div3{
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+
+.div3 img{
+    width: 100%;
+}  
+
+.limonada{
+    width: 933.33333px;
+    height: 933.33333px;
+    background-color: #FBFFA7;
+    z-index: -1;
+    position: absolute;
+}
